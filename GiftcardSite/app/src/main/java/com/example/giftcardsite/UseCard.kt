@@ -32,7 +32,7 @@ class UseCard : AppCompatActivity() {
         var image : CircleImageView = findViewById(R.id.image_view)
         val card : Card? = intent.getParcelableExtra("Card")
         findViewById<EditText>(R.id.amount).setText(card?.amount.toString())
-        Glide.with(this).asBitmap().load("http://appsec.moyix.net/" + card?.product?.productImageLink).into(image)
+        Glide.with(this).asBitmap().load("https://appsec.moyix.net/" + card?.product?.productImageLink).into(image)
         val loggedInUser : User? = intent.getParcelableExtra("User")
         var token : String = "Token " + loggedInUser?.token.toString()
         Log.d("Token check", token)

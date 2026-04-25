@@ -34,7 +34,7 @@ class GetCard : AppCompatActivity() {
         };
 
         findViewById<EditText>(R.id.amount).hint = product?.recommendedPrice.toString()
-        Glide.with(this).asBitmap().load("http://appsec.moyix.net/" + product?.productImageLink).into(image)
+        Glide.with(this).asBitmap().load("https://appsec.moyix.net/" + product?.productImageLink).into(image)
         val productNumber : Int? = product?.productId
         val loggedInUser : User? = intent.getParcelableExtra("User")
         var token : String = "Token " + loggedInUser?.token.toString()
