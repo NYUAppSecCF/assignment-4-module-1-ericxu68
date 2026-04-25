@@ -40,7 +40,7 @@ class UseCard : AppCompatActivity() {
         var button: Button = findViewById(R.id.submit_buy)
         button.text = "Use Card"
         button.setOnClickListener{
-            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("http://appsec.moyix.net").addConverterFactory(
+            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(
                 GsonConverterFactory.create())
             var retrofit: Retrofit = builder.build()
             var client: CardInterface = retrofit.create(CardInterface::class.java)

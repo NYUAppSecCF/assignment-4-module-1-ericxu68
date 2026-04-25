@@ -43,7 +43,7 @@ class GetCard : AppCompatActivity() {
 
         findViewById<Button>(R.id.submit_buy).setOnClickListener{
             val amount : Int = parseInt(findViewById<EditText>(R.id.amount).text.toString())
-            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("http://appsec.moyix.net").addConverterFactory(GsonConverterFactory.create())
+            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(GsonConverterFactory.create())
             var retrofit: Retrofit = builder.build()
             var client: CardInterface = retrofit.create(CardInterface::class.java)
             var card: Card? = null
